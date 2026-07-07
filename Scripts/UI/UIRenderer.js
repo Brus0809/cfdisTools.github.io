@@ -17,21 +17,14 @@ const resultContainer = document.getElementById('result-container');
 const resultDetails = document.getElementById('result-details');
 const btnDownload = document.getElementById('btn-download');
 
-// Si el HTML ya trae su propio #error-banner (con sus propios estilos),
-// se reutiliza. Si no existe, se crea uno básico.
+// Si el HTML ya trae su propio #error-banner se reutiliza.
+// Si no existe, se crea y se le asigna la clase CSS 'error-banner'
+// (los estilos viven en main.css, no aquí).
 let errorBanner = document.getElementById('error-banner');
 if (!errorBanner) {
     errorBanner = document.createElement('div');
     errorBanner.id = 'error-banner';
-    errorBanner.style.display = 'none';
-    errorBanner.style.color = '#ef4444';
-    errorBanner.style.background = '#fef2f2';
-    errorBanner.style.border = '1px solid #fecaca';
-    errorBanner.style.borderRadius = '8px';
-    errorBanner.style.padding = '12px 16px';
-    errorBanner.style.marginBottom = '5px';
-    errorBanner.style.marginTop = '10px';
-    errorBanner.style.fontSize = '14px';
+    errorBanner.classList.add('error-banner', 'hidden');
     filesContainer.parentNode.insertBefore(errorBanner, filesContainer);
 }
 
@@ -56,20 +49,39 @@ export function renderFileList(fileEntries) {
 
     fileEntries.forEach(({ id, file }) => {
         const li = document.createElement('li');
-        const isZip = file.name.endsWith('.zip');
-        const iconClass = isZip ? 'fa-regular fa-file-zipper' : 'fa-regular fa-file-code';
-
         li.dataset.fileId = id;
-        li.innerHTML = `
-            <div class="file-info">
-                <i class="${iconClass}"></i>
-                <span class="file-name" title="${file.name}">${file.name}</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <span class="file-size">${formatBytes(file.size)}</span>
-                <i class="fa-solid fa-xmark remove-file-btn" style="cursor: pointer; color: #ef4444;" data-file-id="${id}"></i>
-            </div>
-        `;
+
+        // -- Lado izquierdo: icono + nombre --
+        const fileInfo = document.createElement('div');
+        fileInfo.className = 'file-info';
+
+        const icon = document.createElement('i');
+        icon.className = file.name.endsWith('.zip')
+            ? 'fa-regular fa-file-zipper'
+            : 'fa-regular fa-file-code';
+
+        // textContent es seguro: nunca interpreta HTML
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'file-name';
+        nameSpan.title = file.name;
+        nameSpan.textContent = file.name;
+
+        fileInfo.append(icon, nameSpan);
+
+        // -- Lado derecho: tamaño + botón eliminar --
+        const fileActions = document.createElement('div');
+        fileActions.className = 'file-actions';
+
+        const sizeSpan = document.createElement('span');
+        sizeSpan.className = 'file-size';
+        sizeSpan.textContent = formatBytes(file.size);
+
+        const removeBtn = document.createElement('i');
+        removeBtn.className = 'fa-solid fa-xmark remove-file-btn';
+        removeBtn.dataset.fileId = id;
+
+        fileActions.append(sizeSpan, removeBtn);
+        li.append(fileInfo, fileActions);
         fragment.appendChild(li);
     });
 
@@ -93,11 +105,11 @@ export function onRemoveFileClick(callback) {
 
 export function showError(message) {
     errorBanner.textContent = message;
-    errorBanner.style.display = 'block';
+    errorBanner.classList.remove('hidden');
 }
 
 export function hideError() {
-    errorBanner.style.display = 'none';
+    errorBanner.classList.add('hidden');
     errorBanner.textContent = '';
 }
 

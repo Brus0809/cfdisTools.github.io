@@ -35,20 +35,50 @@ body {
     overflow-x: hidden;
 }
 
-.navbar{
+.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     width: 100%;
     height: 72px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: var(--accent-hover);
+    background: var(--accent-light);
 }
 
 .logo{
@@ -483,6 +513,133 @@ body {
     border-color: var(--border-hover);
 }
 
+/* SEO Article Section */
+.article-section {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.article-container {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.article-container h2 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.article-container h3 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.article-container p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.article-container strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.article-container ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.article-container li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.article-container em {
+    color: var(--accent-hover);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 118, 110, 0.15) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px 24px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.promo-icon {
+    color: var(--accent-hover);
+}
+
+.promo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-text strong {
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+.promo-text span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.btn-promo {
+    background: transparent;
+    border: 1px solid var(--accent-hover);
+    color: var(--accent-hover);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-promo:hover {
+    background: var(--accent-hover);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .promo-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* Feature Grid */
 .features-grid {
     display: grid;
@@ -589,4 +746,39 @@ body {
         max-width: 100%;
         height: auto;
     }
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Error Banner */
+.error-banner {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 0.875rem;
+}
+
+/* File list actions (right side of each file row) */
+.file-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.file-actions .remove-file-btn {
+    cursor: pointer;
+    color: #ef4444;
+    transition: opacity 0.15s;
+}
+
+.file-actions .remove-file-btn:hover {
+    opacity: 0.7;
 }
