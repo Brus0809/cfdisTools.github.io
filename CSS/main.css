@@ -765,6 +765,20 @@ body {
     font-size: 0.875rem;
 }
 
+/* Warning Banner */
+
+.warning-banner {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 0.875rem;
+    white-space: pre-line;
+}
+
 /* File list actions (right side of each file row) */
 .file-actions {
     display: flex;

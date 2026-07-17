@@ -60,3 +60,24 @@
         .back-link:hover {
             color: var(--accent-hover);
         }
+
+        .tools-logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .logo-separator {
+            color: var(--accent-hover);
+            font-size: 2.8rem;
+            font-weight: 300;
+            opacity: 0.5;
+        }

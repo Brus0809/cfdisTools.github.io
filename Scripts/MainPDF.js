@@ -1,6 +1,9 @@
-// main.js
-// Orquesta los demás módulos: conecta los eventos del DOM (drop zone,
-// botones) con el estado de archivos, el renderizado y la llamada al API.
+// MainPdf.js
+// Orquesta la vista de conversión CFDI -> PDF. Misma lógica que Main.js
+// (Excel): conecta drop zone, botones y estado de archivos con el
+// renderizado y la llamada al API. Solo cambia el módulo de Api usado
+// y el mensaje de resultado, que depende de si el backend devolvió un
+// PDF individual o un ZIP con varios PDFs.
 
 import {
     getSelectedFiles,
@@ -23,13 +26,13 @@ import {
     showDropZoneView,
 } from './UI/UIRenderer.js';
 
-import { convertFiles } from './Api/Api.js';
+import { convertFilesToPdf } from './Api/ApiPDF.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
     fetch('https://cfdistoolsback.onrender.com/Healt/Health')
-        .catch(() => { }); 
-
+        .catch(() => { });
+        
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
     const btnConvert = document.getElementById('btn-convert');
@@ -106,23 +109,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const files = getSelectedFiles().map(f => f.file);
 
-        activeRequest = convertFiles(files, {
+        activeRequest = convertFilesToPdf(files, {
             onProgress: (percent) => {
                 updateProgress(
                     percent,
-                    percent < 100 ? `Subiendo archivos... ${percent}%` : 'Procesando en el servidor...'
+                    percent < 100 ? `Subiendo archivos... ${percent}%` : 'Generando tu(s) PDF...'
                 );
             },
-            onSuccess: ({ blob, fileName, errorCount }) => {
+            onSuccess: ({ blob, fileName, type, errorCount }) => {
                 activeRequest = null;
                 updateProgress(100, '¡Completado!');
                 hideProgressView();
-                showResult({
-                    blob,
-                    fileName,
-                    message: `Se procesaron y estructuraron ${files.length} archivo(s) correctamente en hojas organizadas de Excel.`,
-                    errorCount,
-                });
+
+                const message = type === 'zip'
+                    ? `Se generaron ${files.length} PDF(s) y se empaquetaron en un archivo ZIP.`
+                    : 'Tu PDF se generó correctamente.';
+
+                showResult({ blob, fileName, message, errorCount });
             },
             onError: (message) => {
                 activeRequest = null;
@@ -145,5 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
         hideResult();
         showDropZoneView();
     });
-
 });

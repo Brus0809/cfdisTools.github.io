@@ -4,7 +4,7 @@
 // No toca el DOM.
 
 export const ALLOWED_EXTENSIONS = ['.xml', '.zip'];
-export const MAX_FILE_SIZE_BYTES = 25 * 1024 * 1024; // 25 MB, ajustable
+export const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024; // 5 MB, ajustable
 
 let selectedFiles = []; // [{ id, file }]
 

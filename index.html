@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor Masivo de XML (CFDI) a Excel</title>
+    <title>Convertidor de CFDI a Excel | XML2Excel</title>
     <meta name="description"
-        content="Convierte tus facturas XML del SAT (CFDI 4.0, 3.3, Retenciones y Nóminas) a Excel (.xlsx).">
+        content="Convierte tus archivos XML de CFDI 3.3 y 4.0 a Excel. Procesa comprobantes de emisión, pagos, retenciones y nóminas de forma rápida y gratuita.">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="CSS/main.css">
@@ -28,14 +28,16 @@
 
     <header class="navbar">
         <div class="navbar-container">
-            <a href="https://brus0809.github.io" class="logo">
+            <a href="https://brus0809.github.io" class="logo" target="_blank" rel="noopener noreferrer">
+
                 <span class="bracket">&lt;</span>
                 <span class="letters">BMS</span>
                 <span class="bracket">/&gt;</span>
             </a>
+
             <nav class="nav-links">
                 <a href="index.html" class="nav-link active">A Excel</a>
-                <!-- <a href="pdf.html" class="nav-link">A PDF</a> -->
+                <a href="Pages/PDF/index.html" class="nav-link">A PDF</a>
             </nav>
         </div>
     </header>
@@ -66,8 +68,11 @@
 
             </div>
             <h1 class="main-title">Convierte tus XMLs del SAT a Excel en segundos</h1>
-            <p class="subtitle">Sube tus archivos XML individuales o un archivo ZIP. Procesamos CFDIs de Emisión
-                (Ingresos, Gastos, Pagos), Retenciones y ahora también <strong>Nóminas</strong>. 100% Gratis.</p>
+            <p class="subtitle">
+                Sube tus archivos XML individuales o archivos ZIP y convierte tus CFDI de
+                emisión, pagos, retenciones y nómina en un archivo de Excel organizado.
+                Gratis y fácil de usar.
+            </p>
         </header>
 
         <!-- Main Conversion Card -->
@@ -87,7 +92,7 @@
                 <h3>Arrastra y suelta tus archivos aquí</h3>
                 <p>O haz clic para explorar en tu equipo (.xml o .zip)</p>
                 <span class="file-limits">
-                    Soporta múltiples XMLs o carpetas comprimidas en ZIP
+                    Hasta 3 archivos por conversión. Cada ZIP puede contener hasta 100 XML.
                 </span>
             </div>
 
@@ -155,18 +160,20 @@
         </main>
 
         <!-- Cross-Selling Banner -->
-        <!-- <div class="promo-banner">
+        <div class="promo-banner">
             <div class="promo-content">
-                <svg class="promo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="32" height="32">
-                    <path d="M0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288h-64V160H256c-17.7 0-32-14.3-32-32V64H64v384h96v64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V368c0-8.8 7.2-16 16-16h8zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V368z"/>
+                <svg class="promo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                    width="32" height="32">
+                    <path
+                        d="M0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288h-64V160H256c-17.7 0-32-14.3-32-32V64H64v384h96v64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V368c0-8.8 7.2-16 16-16h8zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V368z" />
                 </svg>
                 <div class="promo-text">
-                    <strong>¿Necesitas la representación impresa?</strong>
+                    <strong>¿Necesitas una representación impresa de tu CFDI?</strong>
                     <span>Prueba nuestro nuevo convertidor de XML a PDF en segundos.</span>
                 </div>
             </div>
-            <a href="pdf.html" class="btn-promo">Ir a PDF ➔</a>
-        </div> -->
+            <a href="Pages/PDF/index.html" class="btn-promo">Ir a PDF</a>
+        </div>
 
         <!-- Information / Features Grid -->
         <section class="features-grid">
@@ -191,25 +198,24 @@
                         d="M480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544L153.5 543.7C121.2 540.4 96 513.1 96 480L96 160C96 124.7 124.7 96 160 96L480 96zM160 384L160 480L288 480L288 384L160 384zM352 384L352 480L480 480L480 384L352 384zM160 320L288 320L288 224L160 224L160 320zM352 320L480 320L480 224L352 224L352 320z" />
                 </svg>
 
-                <h3>Hojas Separadas</h3>
+                <h3>Información Organizada</h3>
 
                 <p>
-                    Genera hojas separadas en el mismo archivo de Excel para facturas normales (Emisión) y retenciones
-                    fiscales, manteniendo todo perfectamente organizado.
+                    Organiza automáticamente tus CFDI en hojas separadas de Excel según su tipo:
+                    Emisión, Retenciones y Nómina.
                 </p>
             </div>
             <div class="feature-card">
                 <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
-
                     <path fill="currentColor"
                         d="M434.8 54.1C446.7 62.7 451.1 78.3 445.7 91.9L367.3 288L512 288C525.5 288 537.5 296.4 542.1 309.1C546.7 321.8 542.8 336 532.5 344.6L244.5 584.6C233.2 594 217.1 594.5 205.2 585.9C193.3 577.3 188.9 561.7 194.3 548.1L272.7 352L128 352C114.5 352 102.5 343.6 97.9 330.9C93.3 318.2 97.2 304 107.5 295.4L395.5 55.4C406.8 46 422.9 45.5 434.8 54.1z" />
                 </svg>
 
-                <h3>Velocidad Increíble</h3>
+                <h3>Procesamiento por Lotes</h3>
 
                 <p>
-                    Procesa cientos de XMLs en milisegundos gracias a nuestro motor optimizado en .NET 9. Ideal para
-                    cierres contables mensuales.
+                    Procesa hasta 3 archivos por conversión. Cada archivo ZIP puede contener hasta
+                    100 XML, permitiendo convertir hasta 300 CFDI en una sola operación.
                 </p>
             </div>
         </section>
@@ -252,11 +258,16 @@
 
                 <h3>Acerca de esta herramienta</h3>
                 <p>
-                    <em>XML2Excel</em> nació de la necesidad de simplificar el trabajo administrativo y contable en
-                    México. Nuestro objetivo es ofrecer una solución de <strong>alto rendimiento y privacidad
-                        absoluta</strong>, procesando los datos directamente en memoria para que tu información
-                    confidencial nunca quede expuesta. Desarrollado con tecnología de punta, aseguramos rapidez y
-                    precisión en cada conversión.
+                    <em>XML2Excel</em> nació de la necesidad de simplificar el trabajo administrativo y contable
+                    relacionado
+                    con los CFDI en México. Nuestro misión es ayudarte a transformar <strong>grandes cantidades de
+                        información XML
+                    </strong> en datos organizados y fáciles de consultar, reduciendo el tiempo dedicado a tareas
+                    manuales.
+                </p>
+                <p>
+                    La herramienta procesa temporalmente tus archivos durante la conversión y está diseñada para ofrecer
+                    una experiencia rápida, sencilla y enfocada en la privacidad de tu información.
                 </p>
             </div>
         </section>
@@ -279,11 +290,10 @@
                 <details class="faq-item">
                     <summary>¿Es seguro subir mis archivos XML a este sitio?</summary>
                     <p>
-                        Sí. Tus archivos se procesan en memoria, únicamente durante el
-                        tiempo necesario para generar tu Excel, y no se almacenan en
-                        ningún servidor ni se comparten con terceros. Una vez que
-                        descargas tu archivo, la información se descarta. Puedes leer más
-                        en nuestro <a href="/Pages/Privacidad/privacidad.html">aviso de privacidad</a>.
+                        Sí. Tus archivos se procesan temporalmente en memoria en nuestro servidor
+                        únicamente durante el tiempo necesario para generar tu Excel. No se almacenan
+                        de forma permanente ni se comparten con terceros. Una vez finalizado el
+                        procesamiento, la información temporal se descarta.
                     </p>
                 </details>
 
@@ -302,20 +312,20 @@
                 </details>
 
                 <details class="faq-item">
-                    <summary>¿Puedo subir muchos archivos XML a la vez?</summary>
+                    <summary>¿Cuántos archivos puedo procesar por conversión?</summary>
                     <p>
-                        Sí, puedes arrastrar múltiples archivos XML individuales o subir
-                        un solo archivo ZIP que los contenga todos. El conversor procesa
-                        cada archivo por separado y organiza los resultados en hojas de
-                        Excel independientes.
+                        Puedes subir hasta <strong>3 archivos por conversión</strong>. Cada archivo
+                        ZIP puede contener hasta <strong>100 archivos XML</strong>, por lo que puedes
+                        procesar hasta <strong>300 XML en una sola conversión</strong> si subes
+                        3 archivos ZIP con 100 XML cada uno.
                     </p>
                 </details>
 
                 <details class="faq-item">
                     <summary>¿Qué versiones de CFDI soporta?</summary>
                     <p>
-                        El conversor está preparado para procesar CFDI 3.3 y 4.0, tanto de
-                        Emisión como de Retenciones e información de pagos.
+                        El conversor procesa CFDI 3.3 y 4.0, incluyendo comprobantes de emisión,
+                        pagos, retenciones y nóminas, según el tipo de archivo XML.
                     </p>
                 </details>
 

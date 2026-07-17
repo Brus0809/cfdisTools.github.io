@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos de Uso | XML2Excel</title>
-    <meta name="description" content="Términos de uso de XML2Excel, conversor de CFDI (XML del SAT) a Excel.">
+
+    <title>Términos de Uso | XML2Excel y XML2PDF</title>
+
+    <meta name="description"
+        content="Términos de uso de las herramientas XML2Excel y XML2PDF para el procesamiento y conversión de archivos CFDI.">
 
     <link rel="stylesheet" href="../../CSS/main.css">
     <link rel="stylesheet" href="../../CSS/termsandprivacy.css">
@@ -16,152 +20,358 @@
     <link rel="apple-touch-icon" href="../../favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../../favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../../favicon/android-chrome-512x512.png">
+
 </head>
 
 <body>
 
     <header class="navbar">
         <div class="navbar-container">
-            <a href="https://brus0809.github.io" class="logo">
+
+            <a href="https://brus0809.github.io" class="logo" target="_blank" rel="noopener noreferrer">
+
                 <span class="bracket">&lt;</span>
                 <span class="letters">BMS</span>
                 <span class="bracket">/&gt;</span>
             </a>
+
             <nav class="nav-links">
-                <a href="../../index.html" class="nav-link active">A Excel</a>
-                <!-- <a href="pdf.html" class="nav-link">A PDF</a> -->
+                <a href="../../index.html" class="nav-link">A Excel</a>
+                <a href="../PDF/index.html" class="nav-link active">A PDF</a>
             </nav>
+
         </div>
     </header>
 
     <div class="app-container">
+
         <header class="app-header">
-            <div class="logo-area">
+            <div class="tools-logo-area">
 
-                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                <!-- XML2Excel -->
+                <div class="tool-logo">
 
-                    <path fill="currentColor"
-                        d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM292 330.7C284.6 319.7 269.7 316.7 258.7 324C247.7 331.3 244.7 346.3 252 357.3L291.2 416L252 474.7C244.6 485.7 247.6 500.6 258.7 508C269.8 515.4 284.6 512.4 292 501.3L320 459.3L348 501.3C355.4 512.3 370.3 515.3 381.3 508C392.3 500.7 395.3 485.7 388 474.7L348.8 416L388 357.3C395.4 346.3 392.4 331.4 381.3 324C370.2 316.6 355.4 319.6 348 330.7L320 372.7L292 330.7z" />
-                </svg>
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
 
-                <span class="logo-text">
-                    XML<span class="accent-text">2</span>Excel
-                </span>
+                        <path fill="currentColor"
+                            d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM292 330.7C284.6 319.7 269.7 316.7 258.7 324C247.7 331.3 244.7 346.3 252 357.3L291.2 416L252 474.7C244.6 485.7 247.6 500.6 258.7 508C269.8 515.4 284.6 512.4 292 501.3L320 459.3L348 501.3C355.4 512.3 370.3 515.3 381.3 508C392.3 500.7 392.3 485.8 388 474.7L348.8 416L388 357.3C395.4 346.3 392.4 331.4 381.3 324C370.2 316.6 355.3 319.6 348 330.7L320 372.7L292 330.7z" />
+
+                    </svg>
+
+                    <span class="logo-text">
+                        XML<span class="accent-text">2</span>Excel
+                    </span>
+
+                </div>
+
+                <!-- Separador -->
+                <span class="logo-separator" aria-hidden="true">/</span>
+
+                <!-- XML2PDF -->
+                <div class="tool-logo">
+
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+
+                        <path fill="currentColor"
+                            d="M128 64C92.7 64 64 92.7 64 128L64 512C64 547.3 92.7 576 128 576L208 576L208 464C208 428.7 236.7 400 272 400L448 400L448 234.5C448 217.5 441.3 201.2 429.3 189.2L322.7 82.7C310.7 70.7 294.5 64 277.5 64L128 64zM389.5 240L296 240C282.7 240 272 229.3 272 216L272 122.5L389.5 240zM272 444C261 444 252 453 252 464L252 592C252 603 261 612 272 612C283 612 292 603 292 592L292 564L304 564C337.1 564 364 537.1 364 504C364 470.9 337.1 444 304 444L272 444zM304 524L292 524L292 484L304 484C315 484 324 493 324 504C324 515 315 524 304 524zM400 444C389 444 380 453 380 464L380 592C380 603 389 612 400 612C460.7 612 484 588.7 484 560L484 496C484 467.3 460.7 444 432 444L400 444zM420 572L420 484L432 484C438.6 484 444 489.4 444 496L444 560C444 566.6 438.6 572 432 572L420 572zM508 464L508 592C508 603 517 612 528 612C539 612 548 603 548 592L548 548L576 548C587 548 596 539 596 528C596 517 587 508 576 508L548 508L548 484L576 484C587 484 596 475 596 464C596 453 587 444 576 444L528 444C517 444 508 453 508 464z" />
+
+                    </svg>
+
+                    <span class="logo-text">
+                        XML<span class="accent-text">2</span>PDF
+                    </span>
+
+                </div>
 
             </div>
         </header>
 
         <main class="legal-container">
-            <a href="../../index.html" class="back-link">
+
+            <a href="#" class="back-link" onclick="history.back(); return false;">
+
                 <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
 
                     <path fill="currentColor"
                         d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z" />
+
                 </svg>
 
                 <span>Volver al conversor</span>
+
             </a>
 
             <div class="main-card">
+
                 <h1>Términos de Uso</h1>
-                <p class="legal-updated">Última actualización: 1 de julio de 2026</p>
 
-                <p>
-                    Al usar XML2Excel ("el Sitio", "la Herramienta") aceptas los siguientes
-                    términos. Si no estás de acuerdo, te pedimos no utilizar el Sitio.
+                <p class="legal-updated">
+                    Última actualización: 17 de julio de 2026
                 </p>
 
-                <h2>1. Descripción del servicio</h2>
                 <p>
-                    XML2Excel es una herramienta gratuita e independiente que convierte
-                    archivos XML de Comprobantes Fiscales Digitales por Internet (CFDI),
-                    incluyendo comprobantes de Emisión y de Retenciones, en archivos de
-                    Excel (.xlsx), con el fin de facilitar su lectura y organización.
+                    Al utilizar XML2Excel, XML2PDF o cualquier otra herramienta disponible
+                    en este sitio (en adelante, "el Sitio" o "las Herramientas"), aceptas
+                    estos Términos de Uso. Si no estás de acuerdo con alguno de ellos, te
+                    pedimos que no utilices el Sitio.
                 </p>
 
-                <h2>2. Sin relación con el SAT</h2>
+                <h2>1. Descripción de los servicios</h2>
+
                 <p>
-                    XML2Excel es un proyecto independiente y no tiene relación oficial,
-                    comercial ni de ningún otro tipo con el Servicio de Administración
-                    Tributaria (SAT) ni con ninguna autoridad fiscal mexicana. El uso de
-                    términos como "CFDI" es meramente descriptivo del formato de archivo
-                    procesado.
+                    El Sitio ofrece herramientas gratuitas e independientes para procesar
+                    archivos XML que contienen Comprobantes Fiscales Digitales por Internet
+                    (CFDI).
                 </p>
 
-                <h2>3. Exactitud de la información</h2>
                 <p>
-                    Aunque nos esforzamos por que la conversión sea precisa, XML2Excel se
-                    ofrece "tal cual" ("as is"), sin garantías de ningún tipo. No garantizamos
-                    que el archivo Excel generado esté libre de errores, ni que refleje con
-                    exactitud absoluta el contenido del XML original. Es responsabilidad del
-                    usuario verificar la información antes de utilizarla para fines fiscales,
-                    contables o legales.
-                </p>
-                <p>
-                    XML2Excel no debe considerarse asesoría fiscal, contable ni legal. Para
-                    decisiones relacionadas con tus obligaciones fiscales, consulta a un
-                    contador público o asesor fiscal certificado.
+                    Dependiendo de la herramienta utilizada, los archivos pueden convertirse
+                    en:
                 </p>
 
-                <h2>4. Uso permitido</h2>
-                <p>Te comprometes a utilizar el Sitio únicamente para fines lícitos. Queda prohibido:</p>
                 <ul>
-                    <li>Subir archivos con el propósito de sobrecargar, dañar o vulnerar el servicio.</li>
-                    <li>Intentar acceder sin autorización a la infraestructura del Sitio.</li>
-                    <li>Usar el Sitio para procesar información de terceros sin su consentimiento.</li>
+                    <li>
+                        Archivos de Excel (.xlsx) con información organizada de los CFDI.
+                    </li>
+
+                    <li>
+                        Representaciones gráficas en formato PDF de los comprobantes
+                        procesados.
+                    </li>
                 </ul>
 
-                <h2>5. Disponibilidad del servicio</h2>
+                <p>
+                    Las herramientas pueden procesar diferentes tipos de CFDI, incluyendo
+                    comprobantes de emisión, pagos, retenciones y nómina, según las
+                    características y compatibilidad de cada herramienta.
+                </p>
+
+                <h2>2. Límites de procesamiento</h2>
+
+                <p>
+                    Para mantener el funcionamiento y disponibilidad de las Herramientas,
+                    pueden aplicarse límites al número y tamaño de los archivos que pueden
+                    procesarse en una sola operación.
+                </p>
+
+                <p>
+                    Actualmente, puedes subir hasta <strong>3 archivos por conversión</strong>.
+                    Cada archivo ZIP puede contener hasta <strong>100 archivos XML</strong>.
+                    Por lo tanto, cuando se utilizan 3 archivos ZIP con 100 XML cada uno,
+                    es posible procesar hasta <strong>300 archivos XML en una sola
+                        conversión</strong>, sujeto a los límites técnicos del servicio.
+                </p>
+
+                <p>
+                    Estos límites pueden modificarse en el futuro debido a cambios técnicos,
+                    de infraestructura o de disponibilidad del servicio.
+                </p>
+
+                <h2>3. Sin relación con el SAT</h2>
+
+                <p>
+                    XML2Excel, XML2PDF y las demás herramientas disponibles en el Sitio son
+                    proyectos independientes y no tienen relación oficial, comercial ni de
+                    ningún otro tipo con el Servicio de Administración Tributaria (SAT) ni
+                    con ninguna autoridad fiscal mexicana.
+                </p>
+
+                <p>
+                    El uso de términos como "CFDI", "SAT", "nómina", "retenciones" u otros
+                    términos fiscales es únicamente descriptivo del tipo de información y
+                    archivos que pueden ser procesados por las Herramientas.
+                </p>
+
+                <h2>4. Exactitud y uso de los resultados</h2>
+
+                <p>
+                    Aunque procuramos que el procesamiento y las conversiones sean precisos,
+                    las Herramientas se ofrecen "tal cual" ("as is") y según disponibilidad,
+                    sin garantías de ningún tipo.
+                </p>
+
+                <p>
+                    No garantizamos que los archivos de Excel o PDF generados estén libres de
+                    errores ni que reproduzcan o representen con exactitud absoluta toda la
+                    información contenida en el XML original.
+                </p>
+
+                <p>
+                    El usuario es responsable de revisar los resultados antes de utilizarlos
+                    para fines fiscales, contables, administrativos o legales.
+                </p>
+
+                <p>
+                    En el caso de los PDF, estos constituyen una representación gráfica del
+                    contenido del CFDI. El archivo XML original es el comprobante fiscal
+                    electrónico que debe conservarse para los fines correspondientes.
+                </p>
+
+                <p>
+                    XML2Excel y XML2PDF no proporcionan asesoría fiscal, contable ni legal.
+                    Para tomar decisiones relacionadas con obligaciones fiscales o
+                    cumplimiento normativo, consulta a un profesional calificado.
+                </p>
+
+                <h2>5. Uso permitido</h2>
+
+                <p>
+                    Te comprometes a utilizar el Sitio únicamente para fines lícitos y de
+                    conformidad con estos Términos. Queda prohibido:
+                </p>
+
+                <ul>
+                    <li>
+                        Subir archivos con el propósito de sobrecargar, dañar, interrumpir o
+                        vulnerar el funcionamiento del Sitio.
+                    </li>
+
+                    <li>
+                        Intentar acceder sin autorización a la infraestructura, sistemas,
+                        servidores o componentes internos del Sitio.
+                    </li>
+
+                    <li>
+                        Intentar evadir los límites técnicos o mecanismos de seguridad de
+                        las Herramientas.
+                    </li>
+
+                    <li>
+                        Utilizar el Sitio para procesar información de terceros sin contar
+                        con la autorización correspondiente.
+                    </li>
+
+                    <li>
+                        Utilizar el Sitio para actividades ilícitas o contrarias a la
+                        legislación aplicable.
+                    </li>
+                </ul>
+
+                <h2>6. Disponibilidad del servicio</h2>
+
                 <p>
                     El Sitio se ofrece de forma gratuita y "según disponibilidad". No
-                    garantizamos que el servicio esté disponible de forma ininterrumpida,
-                    libre de errores, o que continúe operando indefinidamente. Nos reservamos
-                    el derecho de modificar, suspender o discontinuar el servicio en
-                    cualquier momento y sin previo aviso.
+                    garantizamos que las Herramientas estén disponibles de forma
+                    ininterrumpida, libres de errores o que continúen operando
+                    indefinidamente.
                 </p>
 
-                <h2>6. Limitación de responsabilidad</h2>
                 <p>
-                    En la máxima medida permitida por la ley, XML2Excel y sus desarrolladores
-                    no serán responsables por daños directos, indirectos, incidentales o
-                    consecuentes que resulten del uso o la imposibilidad de uso del Sitio,
-                    incluyendo pero no limitado a errores en los datos convertidos, pérdida
-                    de archivos o interrupciones del servicio.
+                    Nos reservamos el derecho de modificar, limitar, suspender o
+                    discontinuar cualquiera de las Herramientas, funciones o servicios en
+                    cualquier momento, con o sin previo aviso.
                 </p>
 
-                <h2>7. Publicidad</h2>
+                <h2>7. Limitación de responsabilidad</h2>
+
                 <p>
-                    Este sitio muestra anuncios a través de Google AdSense. El contenido de
-                    dichos anuncios es responsabilidad de los anunciantes y de Google; no
-                    lo revisamos ni lo respaldamos.
+                    En la máxima medida permitida por la legislación aplicable, XML2Excel,
+                    XML2PDF y sus desarrolladores no serán responsables por daños directos,
+                    indirectos, incidentales, especiales o consecuentes que resulten del
+                    uso o la imposibilidad de uso del Sitio.
                 </p>
 
-                <h2>8. Cambios a estos términos</h2>
                 <p>
-                    Podemos actualizar estos términos en cualquier momento. Los cambios
-                    entrarán en vigor al publicarse en esta página, con su fecha de
-                    actualización correspondiente.
+                    Esto incluye, entre otros casos, errores en los datos procesados,
+                    diferencias entre el XML original y el archivo generado, pérdida de
+                    archivos, interrupciones del servicio, fallos técnicos o cualquier
+                    consecuencia derivada del uso de los resultados generados por las
+                    Herramientas.
                 </p>
 
-                <h2>9. Contacto</h2>
                 <p>
-                    Dudas sobre estos términos: <strong>marsanbrau0809@gmail.com</strong>
+                    El usuario es responsable de conservar sus archivos XML originales y de
+                    verificar la información generada antes de utilizarla para cualquier
+                    propósito relevante.
                 </p>
+
+                <h2>8. Publicidad</h2>
+
+                <p>
+                    El Sitio puede mostrar anuncios a través de servicios de publicidad de
+                    terceros, incluyendo Google AdSense.
+                </p>
+
+                <p>
+                    El contenido de los anuncios, productos, servicios o promociones
+                    mostrados es responsabilidad de los respectivos anunciantes y
+                    proveedores de publicidad. XML2Excel y XML2PDF no respaldan
+                    necesariamente los productos o servicios anunciados.
+                </p>
+
+                <h2>9. Propiedad intelectual</h2>
+
+                <p>
+                    El diseño, código, estructura, contenido, logotipos, elementos gráficos
+                    y demás componentes propios del Sitio pueden estar protegidos por las
+                    leyes aplicables de propiedad intelectual.
+                </p>
+
+                <p>
+                    Salvo autorización expresa, no está permitido copiar, reproducir,
+                    modificar, distribuir o utilizar comercialmente los componentes propios
+                    del Sitio.
+                </p>
+
+                <p>
+                    Los archivos XML que el usuario procese y los datos contenidos en ellos
+                    no pasan a ser propiedad de XML2Excel, XML2PDF ni de sus desarrolladores
+                    por el simple hecho de utilizar las Herramientas.
+                </p>
+
+                <h2>10. Cambios a estos términos</h2>
+
+                <p>
+                    Podemos actualizar estos Términos de Uso cuando sea necesario para
+                    reflejar cambios en nuestras Herramientas, servicios, prácticas de
+                    operación o requisitos legales aplicables.
+                </p>
+
+                <p>
+                    Los cambios entrarán en vigor al publicarse en esta página junto con la
+                    fecha de actualización correspondiente.
+                </p>
+
+                <h2>11. Contacto</h2>
+
+                <p>
+                    Si tienes dudas sobre estos Términos de Uso, puedes escribirnos a:
+                    <strong>marsanbrau0809@gmail.com</strong>
+                </p>
+
             </div>
+
         </main>
+
     </div>
 
-    <!-- Footer Section -->
     <footer class="app-footer">
+
         <div class="footer-content">
-            <p>&copy; 2026 XML2Excel. Todos los derechos reservados. Desarrollado con tecnología ASP.NET Core 9 y
-                MiniExcel.</p>
-            <p class="footer-disclaimer">
-                Este sitio es una herramienta independiente y no tiene relación oficial con el SAT.
-                <a href="../../Pages/Privacidad/privacidad.html">Aviso de privacidad</a> · <a href="../../Pages/Terminos/terminos.html">Términos de
-                    uso</a>
+
+            <p>
+                &copy; 2026 XML2Excel & XML2PDF. Todos los derechos reservados.
+                Desarrollado con tecnología ASP.NET Core 9, MiniExcel, QuestPDF y
+                SkiaSharp.
             </p>
+
+            <p class="footer-disclaimer">
+
+                Este sitio es una herramienta independiente y no tiene relación oficial
+                con el SAT.
+
+                <a href="../../Pages/Privacidad/privacidad.html">
+                    Aviso de privacidad
+                </a>
+                ·
+                <a href="../../Pages/Terminos/terminos.html">
+                    Términos de uso
+                </a>
+
+            </p>
+
         </div>
+
     </footer>
 
 </body>

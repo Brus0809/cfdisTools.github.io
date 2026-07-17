@@ -4,7 +4,8 @@
 // No toca el DOM ni conoce el estado de selectedFiles.
 
 // const ENDPOINT = 'https://localhost:7163/api/cfdiconverter/convert'; 
-const ENDPOINT = 'https://cfdiaexcel.somee.com/api/cfdiconverter/convert';
+const ENDPOINT = 'https://cfdistoolsback.onrender.com/api/cfdiconverter/convert';
+
 const DEFAULT_FILENAME = 'CFDI_Excel_Convertido.xlsx';
 
 function extractFileName(xhr) {
@@ -43,8 +44,9 @@ export function convertFiles(files, { onProgress, onSuccess, onError }) {
     }
 
     xhr.onload = () => {
+        const errorCount = xhr.getResponseHeader('X-Archivos-Con-Error');
         if (xhr.status >= 200 && xhr.status < 300) {
-            onSuccess({ blob: xhr.response, fileName: extractFileName(xhr) });
+            onSuccess({ blob: xhr.response, fileName: extractFileName(xhr), errorCount });
             return;
         }
 

@@ -28,6 +28,14 @@ if (!errorBanner) {
     filesContainer.parentNode.insertBefore(errorBanner, filesContainer);
 }
 
+let warningBanner = document.getElementById('warning-banner');
+if (!warningBanner) {
+    warningBanner = document.createElement('div');
+    warningBanner.id = 'warning-banner';
+    warningBanner.classList.add('warning-banner', 'hidden');
+    filesContainer.parentNode.insertBefore(warningBanner, filesContainer);
+}
+
 let currentDownloadUrl = null;
 
 // ---------- Lista de archivos ----------
@@ -113,6 +121,18 @@ export function hideError() {
     errorBanner.textContent = '';
 }
 
+// ---------- Advertencias ----------
+
+export function showWarning(message) {
+    warningBanner.textContent = message;
+    warningBanner.classList.remove('hidden');
+}
+
+export function hideWarning() {
+    warningBanner.classList.add('hidden');
+    warningBanner.textContent = '';
+}
+
 // ---------- Progreso ----------
 
 export function showProgressView() {
@@ -136,7 +156,20 @@ export function hideProgressView() {
  * Muestra la pantalla de éxito y prepara el enlace de descarga.
  * Libera cualquier Object URL anterior antes de crear el nuevo.
  */
-export function showResult({ blob, fileName, message }) {
+export function showResult({ blob, fileName, message, errorCount }) {
+
+    if (errorCount) {
+        try {
+            const details = JSON.parse(errorCount);
+            const warningMsg = `${details.length} archivo(s) no se pudieron procesar:\n• ${details.join('\n• ')}`;
+            showWarning(warningMsg);
+        } catch {
+            showWarning(`Algunos archivos no se pudieron procesar.`);
+        }
+    } else {
+        hideWarning();
+    }
+
     if (currentDownloadUrl) {
         URL.revokeObjectURL(currentDownloadUrl);
     }
@@ -153,6 +186,7 @@ export function showResult({ blob, fileName, message }) {
 
 export function hideResult() {
     resultContainer.style.display = 'none';
+    hideWarning();
     if (currentDownloadUrl) {
         URL.revokeObjectURL(currentDownloadUrl);
         currentDownloadUrl = null;
